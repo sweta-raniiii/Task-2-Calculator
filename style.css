@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    /* Sky blue + green background */
+    background: linear-gradient(
+        135deg,
+        #87CEEB,
+        #90EE90
+    );
+}
+
+
+/* Calculator */
+
+.calculator {
+    width: 360px;
+
+    padding: 20px;
+
+    border-radius: 24px;
+
+    /* Green calculator body */
+    background: #228B22;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Display */
+
+.display {
+    min-height: 115px;
+
+    padding: 18px;
+
+    margin-bottom: 16px;
+
+    border-radius: 16px;
+
+    /* Sky blue display */
+    background: #87CEEB;
+
+    color: #063b4c;
+
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    overflow: hidden;
+}
+
+
+/* Previous calculation */
+
+#previous-display {
+    min-height: 25px;
+
+    color: #176b17;
+
+    font-size: 17px;
+}
+
+
+/* Current number */
+
+#current-display {
+    font-size: 42px;
+
+    font-weight: 600;
+
+    word-wrap: break-word;
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+/* All buttons */
+
+button {
+    height: 68px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    /* Light sky blue buttons */
+    background: #BFEFFF;
+
+    color: #075E75;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.1s,
+        filter 0.1s;
+}
+
+
+/* Hover */
+
+button:hover {
+    filter: brightness(1.08);
+}
+
+
+/* Click */
+
+button:active {
+    transform: scale(0.94);
+}
+
+
+/* Operators */
+
+.operator {
+    /* Green */
+    background: #32CD32;
+
+    color: white;
+}
+
+
+/* Clear and Delete */
+
+.clear,
+.delete {
+    background: #66CDAA;
+
+    color: white;
+}
+
+
+/* Equal button */
+
+.equals {
+    background: #006400;
+
+    color: white;
+}
+
+
+/* Two-column buttons */
+
+.span-two {
+    grid-column: span 2;
+}
